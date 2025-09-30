@@ -20,18 +20,28 @@ html{
 
 
 /* 1. 讓 header 固定在頂端 */
+
 header {
-  position: fixed;     /* 固定定位 */
-  top: 0;              /* 緊貼頂端 */
+  position: fixed;
+  top: 0;
   left: 0;
-  width: 100%;         /* 橫跨整個視窗 */
-  background: #91B6C6; /* 你要的背景顏色或漸層 */
+  width: 100%;
+  background: #91B6C6;
   color: white;
-  text-align: center;
-  padding: 10px 20px;  /* header 的高度 */
-  z-index: 1000;       /* 確保蓋在其他元素上方 */
+  display: flex;               /* 改用 flex 排版 */
+  justify-content: center;     /* 水平置中 */
+  align-items: center;         /* 垂直置中 */
+  padding: 10px 20px;
+  z-index: 1000;
+  box-sizing: border-box;      /* 避免 padding 撐爆寬度 */
 }
 
+@media (max-width: 600px) {
+  header {
+    padding: 10px;    /* 只覆蓋 padding，其他屬性照舊 */
+    font-size: 14px;  /* 額外調整字體大小 */
+  }
+}
 /* 2. 給 body 預留空間，避免內容被 header 蓋住 */
 
 
