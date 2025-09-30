@@ -5,13 +5,11 @@ html{
 
 
 .question {
-  background-color: #E8F0F3; /* 淡藍色背景 */
+  background-color: #E8F0F3; 
   padding: 1rem;          /* 內距，文字不會緊貼邊緣 */
   margin-bottom: 1rem;    /* 與下一個區塊的距離 */
   border-radius: 8px;       /* 圓角 */
-
   box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* 淡淡的陰影 */
-  /*border: 1px solid #ddd;                /* 或者加上細邊框 */
 }
 
 /* 標題區 */
@@ -31,7 +29,7 @@ header {
   display: flex;               /* 改用 flex 排版 */
   justify-content: center;     /* 水平置中 */
   align-items: center;         /* 垂直置中 */
-  padding: 10px 20px;
+  padding: 5px 20px;
   z-index: 1000;
   box-sizing: border-box;      /* 避免 padding 撐爆寬度 */
   font-size: clamp(1rem, 1.2vw, 1.5rem);
@@ -52,9 +50,7 @@ body {
   max-width: 800px;               /* 網頁寬度 */
   margin: auto;                   /* 置中 */
   padding: 20px;
-
-   padding-top: calc(7.5rem + 20px);    /* 這裡要大於 header 的實際高度 */
-
+  padding-top: calc(7.5rem + 20px);    /* 大於 header 的高度 */
   background: #fdfdfd;
 }
 
@@ -75,19 +71,19 @@ body {
 h2 {
   color: #4D7180;
   margin-top: 0.5rem;
-  border-left: 4px solid #719EB2; /* 左邊一條色線 */
+  border-left: 4px solid #719EB2; /* 左邊色線 */
   padding-left: 0.5rem;
   margin-bottom: 0.5rem;
 }
 p {
-  text-align: justify; /* 文字左右對齊 */
+  text-align: justify; 
   color: #324252;
 }
 
 .link-group {
   display: flex;
   gap: 20px;         /* 兩個連結之間的距離 */
-  justify-content: center; /* 置中 */
+  justify-content: center; 
   margin-top: 20px;
 }
 
