@@ -50,7 +50,7 @@ body {
   max-width: 800px;               /* 網頁寬度 */
   margin: auto;                   /* 置中 */
   padding: 20px;
-  padding-top: calc(7.5rem + 20px);    /* 大於 header 的高度 */
+  padding-top: calc(7.5rem + 10px);    /* 大於 header 的高度 */
   background: #fdfdfd;
 }
 
@@ -59,7 +59,7 @@ body {
     font-size: 0.6rem;
   }
   body {
-    padding-top: calc(4.8rem + 15px);
+    padding-top: calc(4.8rem + 5px);
   }
 
 
