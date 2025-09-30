@@ -1,96 +1,184 @@
-/* 全域設定 */
-html{
-  background-color: #B2CDD8;
+body{
+	font-family: Arial, Helvetica, sans-serif;
+	color: whitesmoke;
+	background-color: #1E3145;
 }
-
-
-.question {
-  background-color: #E8F0F3; /* 淡藍色背景 */
-  padding: 1rem;          /* 內距，文字不會緊貼邊緣 */
-  margin-bottom: 1rem;    /* 與下一個區塊的距離 */
-  border-radius: 8px;       /* 圓角 */
-
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* 淡淡的陰影 */
-  /*border: 1px solid #ddd;                /* 或者加上細邊框 */
+.player{
+	height: 95vh;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	justify-content: center;
 }
-
-/* 標題區 */
-
-
-
-
-/* 1. 讓 header 固定在頂端 */
-
-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background: #91B6C6;
-  color: white;
-  display: flex;               /* 改用 flex 排版 */
-  justify-content: center;     /* 水平置中 */
-  align-items: center;         /* 垂直置中 */
-  padding: 10px 20px;
-  z-index: 1000;
-  box-sizing: border-box;      /* 避免 padding 撐爆寬度 */
-  font-size: clamp(0.8rem, 1.2vw, 1.5rem);
+.wrapper{
+	border: 1px solid transparent;
+	padding: 30px;
+	border-radius: 20px;
+	box-shadow:rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px; 
+	/*查一下box-shadow文件*/
+	background-color: #647282;
 }
-
-/* 2. 給 body 預留空間，避免內容被 header 蓋住 */
-
-
-body {
-  font-family: Arial, sans-serif; /* 字型 */
-  line-height: 1.6;               /* 行距 */
-  max-width: 800px;               /* 網頁寬度 */
-  margin: auto;                   /* 置中 */
-  padding: 20px;
-
-   padding-top: 135px;    /* 這裡要大於 header 的實際高度 */
-
-  background: #fdfdfd;
+.details{
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	justify-content: center;
 }
-
-
-/* 小標題 */
-
-h2 {
-  color: #4D7180;
-  margin-top: 0.5rem;
-  border-left: 4px solid #719EB2; /* 左邊一條色線 */
-  padding-left: 0.5rem;
-  margin-bottom: 0.5rem;
+.track-art{
+	margin: 25px;
+	height: 250px;
+	width: 250px;
+	border: 2px solid #fff;
+	background-size: cover;
+	background-position: center;
+	border-radius: 50%;
+	-moz-box-shadow: 0px 6px 5px #ccc;
+	-webkit-box-shadow: 0px 6px 5px #ccc;
+	box-shadow: 0px 6px 5px #ccc;
+	-moz-border-radius: 190px;
+	-webkit-border-radius: 190px;
+	border-radius: 190px;
 }
-p {
-  text-align: justify; /* 文字左右對齊 */
-  color: #324252;
+.now-playing{
+	font-size: 1rem;
 }
-
-.link-group {
-  display: flex;
-  gap: 20px;         /* 兩個連結之間的距離 */
-  justify-content: center; /* 置中 */
-  margin-top: 20px;
+.track-name{
+	font-size: 2.5rem;
 }
-
-.my-link {
-  border: 2px solid #719EB2;
-  padding: 5px 16px;
-  border-radius: 8px;
-  color: #324252;
-  text-decoration: none;
-  transition: all 0.3s;
+.track-artist{
+	margin-top: 5px;
+	font-size: 1.5rem;
 }
-.my-link:hover {
-  background-color: #719EB2;
-  color: white;
+.buttons{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	margin-top: 30px;
 }
-
-footer {
-  text-align: center;
-  background: #f5f5f5;
-  padding: 1rem;
-  border-radius: 8px;
-  margin-bottom: 1rem;
+.active{
+	color: black;
+}
+.repeat-track,
+.random-track,
+.playpause-track,
+.prev-track,
+.next-track{
+	padding: 25px;
+	opacity: 0.8;
+	transition: opacity .2s;
+	/*查一下transition*/
+}
+.repeat-track:hover,
+.random-track:hover,
+.playpause-track:hover,
+.prev-track:hover,
+.next-track:hover{
+	opacity: 1.0;
+}
+.slider_container{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.seek_slider,
+.volume_slider{
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	appearance: none;
+	height: 5px;
+	background: #83a9ff;
+	-webkit-transition: .2s;
+	transition: opacity .2s;
+}
+.seek_slider::-webkit-slider-thumb,
+.volume_slider::-webkit-slider-thumb{
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearnce: none;
+	width: 15px;
+	height: 15px;
+	background: white;
+	border: 3px solid #3774ff;
+	cursor: pointer;
+	border-radius: 100%;
+}
+.seek_slider:hover,
+.volume_slider:hover{
+	opacity: 1.0;
+}
+.seek_slider{
+	width: 60%;
+}
+.volume_slider{
+	width: 30%;
+}
+.current-time,
+.total-duration{
+	padding: 10px;
+}
+i,
+i.fa-play-circle,
+i.fa-pause-circle,
+i.fa-step-forward,
+i.fa-step-backward{
+	cursor: pointer;
+}
+.randomActive{
+	color: black;
+}
+.rotate{
+	animation: rotation 8s infinite linear;
+}
+@keyframes rotation{
+	from{
+		transform: rotate(0deg);
+	}
+	to{
+		transform: rotate(359deg);
+	}
+}
+.loader{
+	height: 70px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.loader .stroke{
+	background: #f1f1f1;
+	height: 150%;
+	width: 10px;
+	border-radius: 50px;
+	margin: 0px 10px;
+	animation: animate 1.4s linear infinite;
+}
+@keyframes animate{
+	50%{
+		height: 20%;
+		background: #4286f4;
+	}
+	100%{
+		height: 100%;
+	}
+}
+.stroke:nth-child(1){
+	animation-delay: 0s;
+}
+.stroke:nth-child(2){
+	animation-delay: 0.3s;
+}
+.stroke:nth-child(3){
+	animation-delay: 0.6s;
+}
+.stroke:nth-child(4){
+	animation-delay: 0.0s;
+}
+.stroke:nth-child(5){
+	animation-delay: 0.6s;
+}
+.stroke:nth-child(6){
+	animation-delay: 0.3s;
+}
+.stroke:nth-child(7){
+	animation-delay: 0s;
 }
