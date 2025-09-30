@@ -34,14 +34,9 @@ header {
   padding: 10px 20px;
   z-index: 1000;
   box-sizing: border-box;      /* 避免 padding 撐爆寬度 */
+  font-size: clamp(1rem, 1.5vw, 1.5rem);
 }
 
-@media (max-width: 600px) {
-  header {
-    padding: 10px;    /* 只覆蓋 padding，其他屬性照舊 */
-    font-size: 14px;  /* 額外調整字體大小 */
-  }
-}
 /* 2. 給 body 預留空間，避免內容被 header 蓋住 */
 
 
