@@ -22,7 +22,7 @@ html{
 /* 1. 讓 header 固定在頂端 */
 
 header {
-  position: sticky;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -39,7 +39,7 @@ header {
 
 @media (max-width: 600px) {
   header {
-    font-size: 0.75rem;
+    font-size: 0.6rem;
   }
 }
 
