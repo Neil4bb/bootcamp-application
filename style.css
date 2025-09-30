@@ -27,7 +27,7 @@ header {
   left: 0;
   width: 100%;
   background: #91B6C6;
-  color: white;
+  color: black;
   display: flex;               /* 改用 flex 排版 */
   justify-content: center;     /* 水平置中 */
   align-items: center;         /* 垂直置中 */
@@ -95,4 +95,5 @@ footer {
   margin-bottom: 1rem;
 
 }
+
 
