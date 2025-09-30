@@ -58,6 +58,17 @@ body {
   background: #fdfdfd;
 }
 
+@media (max-width: 600px) {
+  header {
+    font-size: 0.6rem;
+  }
+  body {
+    padding-top: calc(5rem + 10px);
+  }
+
+
+}
+
 
 /* 小標題 */
 
