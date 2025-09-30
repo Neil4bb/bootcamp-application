@@ -34,7 +34,7 @@ header {
   padding: 10px 20px;
   z-index: 1000;
   box-sizing: border-box;      /* 避免 padding 撐爆寬度 */
-  font-size: clamp(1rem, 1.5vw, 1.5rem);
+  font-size: clamp(0.5rem, 1.5vw, 1.5rem);
 }
 
 /* 2. 給 body 預留空間，避免內容被 header 蓋住 */
@@ -93,4 +93,5 @@ footer {
   padding: 1rem;
   border-radius: 8px;
   margin-bottom: 1rem;
+
 }
